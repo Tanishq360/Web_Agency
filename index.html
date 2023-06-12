@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,800;1,300;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      color: white;
+      background-image: linear-gradient(to bottom right, #0A0908 47.5%, #CBC2A9 47.5% 100%);
+
+    }
+
+    .headerimage {
+      width: 35%;
+      min-width: 600px;
+    }
+
+    h1.main-intro {
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 68px;
+      line-height: 90px;
+      margin-left: 5%;
+      margin-top: 110px;
+      margin-bottom: 7%;
+      letter-spacing: -.01em;
+
+    }
+
+    .introduction-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      flex-shrink: 1;
+      justify-content: center;
+      gap: 17%;
+
+    }
+
+    .introimg {
+      width: 27rem;
+      height: 18rem;
+      /* float: left;
+      margin-right: 12px; */
+      border: black solid 5px;
+    }
+
+
+    p.card-text {
+      font-family: 'Hind', sans-serif;
+      font-size: 1.4rem;
+      color: white;
+      /* display: inline-block; */
+      width: 27rem;
+      margin-top: 10px;
+      font-weight: 700;
+    }
+
+    .image-title {
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 12px;
+      /* display: inline-block; */
+      border-bottom: white solid 5px;
+      padding-bottom: 3px;
+
+    }
+
+    .Construction,
+    p.Construction {
+      color: #0D0D0D;
+      border-bottom: black solid 5px;
+    }
+
+    h1.Construction {
+      color: #0D0D0D;
+      border-bottom: black solid 5px;
+      text-shadow: -3px 0 #CBC2A9, 0 3px #CBC2A9, 3px 0 #CBC2A9, 0 -3px #CBC2A9;
+
+    }
+
+    p.beauty {
+      border-bottom: white solid 5px;
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      height: 80vh;
+      position: relative;
+      margin-top: 10rem;
+      margin-bottom: 5rem;
+    }
+
+
+    .pricing-plan {
+      flex: 1;
+      background-color: rgba(121, 72, 178, 0.85);
+      border-radius: 2%;
+      text-align: center;
+      padding: 7px 20px 30px 20px;
+      max-width: 300px;
+      transition: all 700ms;
+      transform: scale(1);
+      /* 4464AD */
+    }
+
+    .pricing-plan:hover{
+      transition: all 700ms;
+      transform: scale(1.1);
+    }
+
+    .plan-button {
+      background-color: #FB4D3D;
+      color: white;
+      border: solid black 1.5px;
+      border-radius: 14%;
+      padding: 8px;
+      cursor: pointer;
+      font-size: 22px;
+      transition: all 200ms;
+      box-shadow: 0 6px #c1c1c1;
+    }
+
+ .plan-button:hover {background-color: #e33424;}
+
+.plan-button:active {
+  background-color: #c03c30;
+  box-shadow: 0 4px #666;
+  transform: translateY(2px);}
+
+
+    .plan-title {
+      font-weight: 300;
+      font-size: 4.6rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+      border-bottom: solid #573182 7px;
+    }
+
+    .plan-price {
+      font-weight: bold;
+      font-size: 2.8rem;
+      font-family: 'Roboto Condensed', sans-serif;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 2px #000000;
+    }
+
+    .plan-features {
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+    }
+
+    li {
+      line-height: 200%;
+    }
+
+    footer{
+      color: black;
+      font-weight: 900;
+    }
+
+    @media (max-width: 1100px) {
+
+      .Construction,
+      p.Construction {
+        color: white;
+        border-bottom: white solid 5px;
+      }
+
+      h1.Construction {
+        border-bottom: white solid 5px;
+
+      }
+
+      h1.main-intro {
+        font-weight: 700;
+        font-size: 55px;
+      }
+
+    }
+
+    @media (max-width: 1100px) {
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .pricing-plan {
+        min-width: 270px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <img class="headerimage" src="Solid.png" alt="logo">
+
+  <div class="introduction-part">
+    <h1 class="main-intro">A digital design agency<br> focused on web</h1>
+
+    <div class="introduction-container">
+
+      <div class="introflexchild">
+        <h1 class="image-title beauty">Beauty</h1>
+        <img class="introimg" src="beautiful.jpg" alt="beautiful">
+        <p class="card-text beauty">We strive to create the most beautiful websites. Working closely with you
+          to design and develop websites for your business. </p>
+      </div>
+
+      <div class="introflexchild">
+        <h1 class="image-title Construction">Construction</h1>
+        <img class="introimg" src="metal.jpg" alt="beautiful">
+        <p class="card-text Construction">Built by our team of professional developers,
+          we ensure the most rigourous and modern websites </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ Responsive</li>
+        <li>✅ 5 pages</li>
+        <li>✅ Reliable Hosting</li>
+        <li>🚫 SEO</li>
+        <li>🚫 Support and Updates</li>
+      </ul>
+      <div class="button"><button class="plan-button">Sign Up</a></div>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ Responsive</li>
+        <li>✅ 10 pages</li>
+        <li>✅ Reliable Hosting</li>
+        <li>✅ SEO</li>
+        <li>🚫 Support and Updates</li>
+      </ul>
+      <div class="button"><button class="plan-button">Sign Up</a></div>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ Responsive</li>
+        <li>✅ 15 pages</li>
+        <li>✅ Reliable Hosting</li>
+        <li>✅ SEO</li>
+        <li>✅ Support and Updates</li>
+      </ul>
+      <div class="button"><button class="plan-button">Sign Up</a></div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Create. Develop. Design.</p>
+  </footer>
+
+</body>
+
+</html>
